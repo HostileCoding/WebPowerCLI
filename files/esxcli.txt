@@ -1,0 +1,676 @@
+device.alias
+device.alias.get(string alias)
+device.alias.list()
+esxcli.command
+esxcli.command.list()
+fcoe.adapter
+fcoe.adapter.list()
+fcoe.nic
+fcoe.nic.disable(string nicname)
+fcoe.nic.discover(string nicname)
+fcoe.nic.list()
+graphics.device
+graphics.device.list()
+graphics.vm
+graphics.vm.list()
+hardware.bootdevice
+hardware.bootdevice.list()
+hardware.clock
+hardware.clock.get()
+hardware.clock.set(long day, long hour, long min, long month, long sec, long year)
+hardware.cpu
+hardware.cpu.cpuid
+hardware.cpu.cpuid.get(long cpu)
+hardware.cpu.global
+hardware.cpu.global.get()
+hardware.cpu.global.set(boolean hyperthreading)
+hardware.cpu.list()
+hardware.ipmi
+hardware.ipmi.fru
+hardware.ipmi.fru.get(boolean ignoremissing, boolean includeraw, string node)
+hardware.ipmi.fru.list(boolean ignoremissing, boolean includeraw, string node)
+hardware.ipmi.sdr
+hardware.ipmi.sdr.get(boolean ignoremissing, boolean includeraw, string node)
+hardware.ipmi.sdr.list(boolean ignoremissing, boolean includeraw, string node)
+hardware.ipmi.sel
+hardware.ipmi.sel.get(boolean ignoremissing, boolean includeraw, string node)
+hardware.ipmi.sel.list(boolean ignoremissing, boolean includeraw, string node)
+hardware.ipmi.help()
+hardware.memory
+hardware.memory.get()
+hardware.pci
+hardware.pci.list(string class, string mask)
+hardware.platform
+hardware.platform.get()
+hardware.trustedboot
+hardware.trustedboot.get()
+iscsi.adapter
+iscsi.adapter.auth
+iscsi.adapter.auth.chap
+iscsi.adapter.auth.chap.get(string adapter, string direction)
+iscsi.adapter.auth.chap.set(string adapter, string authname, boolean default, string direction, string level, string secret)
+iscsi.adapter.auth.help()
+iscsi.adapter.capabilities
+iscsi.adapter.capabilities.get(string adapter)
+iscsi.adapter.discovery
+iscsi.adapter.discovery.sendtarget
+iscsi.adapter.discovery.sendtarget.auth
+iscsi.adapter.discovery.sendtarget.auth.chap
+iscsi.adapter.discovery.sendtarget.auth.chap.get(string adapter, string address, string direction)
+iscsi.adapter.discovery.sendtarget.auth.chap.set(string adapter, string address, string authname, boolean default, string direction, boolean inherit, string level, string secret)
+iscsi.adapter.discovery.sendtarget.auth.help()
+iscsi.adapter.discovery.sendtarget.param
+iscsi.adapter.discovery.sendtarget.param.get(string adapter, string address)
+iscsi.adapter.discovery.sendtarget.param.set(string adapter, string address, boolean default, boolean inherit, string key, string value)
+iscsi.adapter.discovery.sendtarget.add(string adapter, string address)
+iscsi.adapter.discovery.sendtarget.list(string adapter)
+iscsi.adapter.discovery.sendtarget.remove(string adapter, string address)
+iscsi.adapter.discovery.statictarget
+iscsi.adapter.discovery.statictarget.add(string adapter, string address, string name)
+iscsi.adapter.discovery.statictarget.list(string adapter)
+iscsi.adapter.discovery.statictarget.remove(string adapter, string address, string name)
+iscsi.adapter.discovery.status
+iscsi.adapter.discovery.status.get(string adapter)
+iscsi.adapter.discovery.rediscover(string adapter)
+iscsi.adapter.firmware
+iscsi.adapter.firmware.get(string adapter, string file)
+iscsi.adapter.firmware.set(string adapter, string file)
+iscsi.adapter.param
+iscsi.adapter.param.get(string adapter)
+iscsi.adapter.param.set(string adapter, boolean default, string key, string value)
+iscsi.adapter.target
+iscsi.adapter.target.portal
+iscsi.adapter.target.portal.auth
+iscsi.adapter.target.portal.auth.chap
+iscsi.adapter.target.portal.auth.chap.get(string adapter, string address, string direction, string method, string name)
+iscsi.adapter.target.portal.auth.chap.set(string adapter, string address, string authname, boolean default, string direction, boolean inherit, string level, string name, string secret)
+iscsi.adapter.target.portal.auth.help()
+iscsi.adapter.target.portal.param
+iscsi.adapter.target.portal.param.get(string adapter, string address, string name)
+iscsi.adapter.target.portal.param.set(string adapter, string address, boolean default, boolean inherit, string key, string name, string value)
+iscsi.adapter.target.portal.list(string adapter, string name)
+iscsi.adapter.target.list(string adapter, string name)
+iscsi.adapter.get(string adapter)
+iscsi.adapter.list(string adapter)
+iscsi.adapter.set(string adapter, string alias, string name)
+iscsi.ibftboot
+iscsi.ibftboot.get()
+iscsi.ibftboot.import()
+iscsi.logicalnetworkportal
+iscsi.logicalnetworkportal.list(string adapter)
+iscsi.networkportal
+iscsi.networkportal.ipconfig
+iscsi.networkportal.ipconfig.get(string adapter, string nic)
+iscsi.networkportal.ipconfig.set(string adapter, string dns1, string dns2, string gateway, string ip, string nic, string subnet)
+iscsi.networkportal.add(string adapter, boolean force, string nic)
+iscsi.networkportal.list(string adapter)
+iscsi.networkportal.remove(string adapter, boolean force, string nic)
+iscsi.physicalnetworkportal
+iscsi.physicalnetworkportal.param
+iscsi.physicalnetworkportal.param.get(string adapter, string nic)
+iscsi.physicalnetworkportal.param.set(string adapter, string nic, string option, long value)
+iscsi.physicalnetworkportal.list(string adapter)
+iscsi.plugin
+iscsi.plugin.list(string adapter, string plugin)
+iscsi.session
+iscsi.session.connection
+iscsi.session.connection.list(string adapter, string cid, string isid, string name)
+iscsi.session.add(string adapter, string isid, string name)
+iscsi.session.list(string adapter, string isid, string name)
+iscsi.session.remove(string adapter, string isid, string name)
+iscsi.software
+iscsi.software.get()
+iscsi.software.set(boolean enabled)
+network.diag
+network.diag.ping(long count, boolean debug, boolean df, string host, string interface, string interval, boolean ipv4, boolean ipv6, string netstack, string nexthop, long size, long ttl, string wait)
+network.fence
+network.fence.network
+network.fence.network.bte
+network.fence.network.bte.list(long fenceid, string vdsname)
+network.fence.network.port
+network.fence.network.port.list(long fenceid, string vdsname)
+network.fence.network.list(long fenceid, string vdsname)
+network.fence.list()
+network.firewall
+network.firewall.ruleset
+network.firewall.ruleset.allowedip
+network.firewall.ruleset.allowedip.add(string ipaddress, string rulesetid)
+network.firewall.ruleset.allowedip.list(string rulesetid)
+network.firewall.ruleset.allowedip.remove(string ipaddress, string rulesetid)
+network.firewall.ruleset.rule
+network.firewall.ruleset.rule.list(string rulesetid)
+network.firewall.ruleset.list(string rulesetid)
+network.firewall.ruleset.set(boolean allowedall, boolean enabled, string rulesetid)
+network.firewall.get()
+network.firewall.load()
+network.firewall.refresh()
+network.firewall.set(boolean defaultaction, boolean enabled)
+network.firewall.unload()
+network.ip
+network.ip.connection
+network.ip.connection.list(string netstack, string type)
+network.ip.dns
+network.ip.dns.search
+network.ip.dns.search.add(string domain, string netstack)
+network.ip.dns.search.list(string netstack)
+network.ip.dns.search.remove(string domain, string netstack)
+network.ip.dns.server
+network.ip.dns.server.add(string netstack, string server)
+network.ip.dns.server.list(string netstack)
+network.ip.dns.server.remove(boolean all, string netstack, string server)
+network.ip.dns.help()
+network.ip.interface
+network.ip.interface.ipv4
+network.ip.interface.ipv4.get(string interfacename, string netstack)
+network.ip.interface.ipv4.set(string interfacename, string ipv4, string netmask, boolean peerdns, string type)
+network.ip.interface.ipv6
+network.ip.interface.ipv6.address
+network.ip.interface.ipv6.address.add(string interfacename, string ipv6)
+network.ip.interface.ipv6.address.list()
+network.ip.interface.ipv6.address.remove(string interfacename, string ipv6)
+network.ip.interface.ipv6.get(string interfacename, string netstack)
+network.ip.interface.ipv6.set(boolean enabledhcpv6, boolean enablerouteradv, string interfacename, boolean peerdns)
+network.ip.interface.tag
+network.ip.interface.tag.add(string interfacename, string tagname)
+network.ip.interface.tag.get(string interfacename)
+network.ip.interface.tag.remove(string interfacename, string tagname)
+network.ip.interface.add(string dvportid, string dvsname, string interfacename, string macaddress, long mtu, string netstack, string portgroupname)
+network.ip.interface.list(string netstack)
+network.ip.interface.remove(string dvportid, string dvsname, string interfacename, string netstack, string portgroupname)
+network.ip.interface.set(boolean enabled, string interfacename, long mtu)
+network.ip.ipsec
+network.ip.ipsec.sa
+network.ip.ipsec.sa.add(string encryptionalgorithm, string encryptionkey, string integrityalgorithm, string integritykey, string sadestination, string samode, string saname, string sasource, string saspi)
+network.ip.ipsec.sa.list()
+network.ip.ipsec.sa.remove(boolean removeall, string sadestination, string saname, string sasource, string saspi)
+network.ip.ipsec.sp
+network.ip.ipsec.sp.add(string action, long destinationport, string flowdirection, string saname, long sourceport, string spdestination, string spmode, string spname, string spsource, string upperlayerprotocol)
+network.ip.ipsec.sp.list()
+network.ip.ipsec.sp.remove(boolean removeall, string spname)
+network.ip.ipsec.set(string ikeconf)
+network.ip.neighbor
+network.ip.neighbor.list(string interfacename, string netstack, string version)
+network.ip.neighbor.remove(string interfacename, string neighboraddr, string netstack, string version)
+network.ip.netstack
+network.ip.netstack.add(boolean disabled, string netstack)
+network.ip.netstack.get(string netstack)
+network.ip.netstack.list()
+network.ip.netstack.remove(string netstack)
+network.ip.netstack.set(string ccalgo, boolean enable, boolean ipv6enabled, long maxconn, string name, string netstack)
+network.ip.route
+network.ip.route.ipv4
+network.ip.route.ipv4.add(string gateway, string netstack, string network)
+network.ip.route.ipv4.list(string netstack)
+network.ip.route.ipv4.remove(string gateway, string netstack, string network)
+network.ip.route.ipv6
+network.ip.route.ipv6.add(string gateway, string netstack, string network)
+network.ip.route.ipv6.list(string netstack)
+network.ip.route.ipv6.remove(string gateway, string netstack, string network)
+network.ip.route.help()
+network.ip.get()
+network.ip.set(boolean ipv6enabled)
+network.nic
+network.nic.coalesce
+network.nic.coalesce.get(string vmnic)
+network.nic.coalesce.set(long rxmaxframes, long rxusecs, long txmaxframes, long txusecs, string vmnic)
+network.nic.cso
+network.nic.cso.get(string vmnic)
+network.nic.cso.set(long enable, string vmnic)
+network.nic.eeprom
+network.nic.eeprom.change(string file, long magic, long offset, long value, string vmnic)
+network.nic.eeprom.dump(long length, long offset, string vmnic)
+network.nic.negotiate
+network.nic.negotiate.restart(string vmnic)
+network.nic.register
+network.nic.register.dump(string vmnic)
+network.nic.selftest
+network.nic.selftest.run(long online, string vmnic)
+network.nic.sg
+network.nic.sg.get(string vmnic)
+network.nic.sg.set(long enable, string vmnic)
+network.nic.stats
+network.nic.stats.get(string nicname)
+network.nic.tso
+network.nic.tso.get(string vmnic)
+network.nic.tso.set(long enable, string vmnic)
+network.nic.vlan
+network.nic.vlan.stats
+network.nic.vlan.stats.get(string nicname)
+network.nic.vlan.stats.set(boolean enabled, string nicname)
+network.nic.vlan.help()
+network.nic.down(string nicname)
+network.nic.get(string nicname)
+network.nic.list()
+network.nic.set(boolean auto, string duplex, long messagelevel, string nicname, long phyaddress, string port, long speed, string transceivertype, string wakeonlan)
+network.nic.up(string nicname)
+network.port
+network.port.filter
+network.port.filter.stats
+network.port.filter.stats.get(long portid)
+network.port.filter.help()
+network.port.stats
+network.port.stats.get(long portid)
+network.port.help()
+network.sriovnic
+network.sriovnic.vf
+network.sriovnic.vf.list(string nicname)
+network.sriovnic.vf.stats(string nicname, long vfid)
+network.sriovnic.list()
+network.vm
+network.vm.port
+network.vm.port.list(long worldid)
+network.vm.list()
+network.vswitch
+network.vswitch.dvs
+network.vswitch.dvs.vmware
+network.vswitch.dvs.vmware.lacp
+network.vswitch.dvs.vmware.lacp.config
+network.vswitch.dvs.vmware.lacp.config.get(string dvs)
+network.vswitch.dvs.vmware.lacp.stats
+network.vswitch.dvs.vmware.lacp.stats.get(string dvs)
+network.vswitch.dvs.vmware.lacp.status
+network.vswitch.dvs.vmware.lacp.status.get(string dvs)
+network.vswitch.dvs.vmware.lacp.timeout
+network.vswitch.dvs.vmware.lacp.timeout.set(long lagid, string nicname, boolean timeout, string vds)
+network.vswitch.dvs.vmware.lacp.help()
+network.vswitch.dvs.vmware.vxlan
+network.vswitch.dvs.vmware.vxlan.config
+network.vswitch.dvs.vmware.vxlan.config.stats
+network.vswitch.dvs.vmware.vxlan.config.stats.get()
+network.vswitch.dvs.vmware.vxlan.config.stats.set(long level)
+network.vswitch.dvs.vmware.vxlan.config.help()
+network.vswitch.dvs.vmware.vxlan.network
+network.vswitch.dvs.vmware.vxlan.network.arp
+network.vswitch.dvs.vmware.vxlan.network.arp.list(string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.arp.reset(string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.mac
+network.vswitch.dvs.vmware.vxlan.network.mac.list(string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.mac.reset(string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.mtep
+network.vswitch.dvs.vmware.vxlan.network.mtep.list(string mtepip, string segmentid, string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.port
+network.vswitch.dvs.vmware.vxlan.network.port.stats
+network.vswitch.dvs.vmware.vxlan.network.port.stats.list(string vdsname, string vdsportid, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.port.stats.reset(string vdsname, string vdsportid, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.port.list(string vdsname, string vdsportid, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.stats
+network.vswitch.dvs.vmware.vxlan.network.stats.list(string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.stats.reset(string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.network.list(string vdsname, long vxlanid)
+network.vswitch.dvs.vmware.vxlan.stats
+network.vswitch.dvs.vmware.vxlan.stats.list(string vdsname)
+network.vswitch.dvs.vmware.vxlan.stats.reset(string vdsname)
+network.vswitch.dvs.vmware.vxlan.vmknic
+network.vswitch.dvs.vmware.vxlan.vmknic.multicastgroup
+network.vswitch.dvs.vmware.vxlan.vmknic.multicastgroup.list(string vdsname, long vmknicid, string vmknicip, string vmknicname)
+network.vswitch.dvs.vmware.vxlan.vmknic.stats
+network.vswitch.dvs.vmware.vxlan.vmknic.stats.list(long endpointid, string vdsname, string vmknicip, string vmknicname)
+network.vswitch.dvs.vmware.vxlan.vmknic.stats.reset(long endpointid, string vdsname, string vmknicip, string vmknicname)
+network.vswitch.dvs.vmware.vxlan.vmknic.list(long endpointid, string vdsname, string vmknicip, string vmknicname)
+network.vswitch.dvs.vmware.vxlan.get()
+network.vswitch.dvs.vmware.vxlan.list(string vdsname)
+network.vswitch.dvs.vmware.list(string vdsname)
+network.vswitch.dvs.help()
+network.vswitch.standard
+network.vswitch.standard.policy
+network.vswitch.standard.policy.failover
+network.vswitch.standard.policy.failover.get(string vswitchname)
+network.vswitch.standard.policy.failover.set(string activeuplinks, boolean failback, string failuredetection, string loadbalancing, boolean notifyswitches, string standbyuplinks, string vswitchname)
+network.vswitch.standard.policy.security
+network.vswitch.standard.policy.security.get(string vswitchname)
+network.vswitch.standard.policy.security.set(boolean allowforgedtransmits, boolean allowmacchange, boolean allowpromiscuous, string vswitchname)
+network.vswitch.standard.policy.shaping
+network.vswitch.standard.policy.shaping.get(string vswitchname)
+network.vswitch.standard.policy.shaping.set(long avgbandwidth, long burstsize, boolean enabled, long peakbandwidth, string vswitchname)
+network.vswitch.standard.policy.help()
+network.vswitch.standard.portgroup
+network.vswitch.standard.portgroup.policy
+network.vswitch.standard.portgroup.policy.failover
+network.vswitch.standard.portgroup.policy.failover.get(string portgroupname)
+network.vswitch.standard.portgroup.policy.failover.set(string activeuplinks, boolean failback, string failuredetection, string loadbalancing, boolean notifyswitches, string portgroupname, string standbyuplinks, boolean usevswitch)
+network.vswitch.standard.portgroup.policy.security
+network.vswitch.standard.portgroup.policy.security.get(string portgroupname)
+network.vswitch.standard.portgroup.policy.security.set(boolean allowforgedtransmits, boolean allowmacchange, boolean allowpromiscuous, string portgroupname, boolean usevswitch)
+network.vswitch.standard.portgroup.policy.shaping
+network.vswitch.standard.portgroup.policy.shaping.get(string portgroupname)
+network.vswitch.standard.portgroup.policy.shaping.set(long avgbandwidth, long burstsize, boolean enabled, long peakbandwidth, string portgroupname, boolean usevswitch)
+network.vswitch.standard.portgroup.policy.help()
+network.vswitch.standard.portgroup.add(string portgroupname, string vswitchname)
+network.vswitch.standard.portgroup.list()
+network.vswitch.standard.portgroup.remove(string portgroupname, string vswitchname)
+network.vswitch.standard.portgroup.set(string portgroupname, long vlanid)
+network.vswitch.standard.uplink
+network.vswitch.standard.uplink.add(string uplinkname, string vswitchname)
+network.vswitch.standard.uplink.remove(string uplinkname, string vswitchname)
+network.vswitch.standard.add(long ports, string vswitchname)
+network.vswitch.standard.list(string vswitchname)
+network.vswitch.standard.remove(string vswitchname)
+network.vswitch.standard.set(string cdpstatus, long mtu, string vswitchname)
+network.vswitch.help()
+sched.reliablemem
+sched.reliablemem.get()
+sched.swap
+sched.swap.system
+sched.swap.system.get()
+sched.swap.system.set(boolean datastoreenabled, string datastorename, long datastoreorder, boolean hostcacheenabled, long hostcacheorder, boolean hostlocalswapenabled, long hostlocalswaporder)
+sched.swap.help()
+software.acceptance
+software.acceptance.get()
+software.acceptance.set(string level)
+software.profile
+software.profile.get(boolean rebootingimage)
+software.profile.install(string[] depot, boolean dryrun, boolean force, boolean maintenancemode, boolean noliveinstall, boolean nosigcheck, boolean oktoremove, string profile, string proxy)
+software.profile.update(boolean allowdowngrades, string[] depot, boolean dryrun, boolean force, boolean maintenancemode, boolean noliveinstall, boolean nosigcheck, string profile, string proxy)
+software.profile.validate(string[] depot, string profile, string proxy)
+software.sources
+software.sources.profile
+software.sources.profile.get(string[] depot, string profile, string proxy)
+software.sources.profile.list(string[] depot, string proxy)
+software.sources.vib
+software.sources.vib.get(string[] depot, string proxy, string[] vibname, string[] viburl)
+software.sources.vib.list(string[] depot, string proxy)
+software.sources.help()
+software.vib
+software.vib.get(boolean rebootingimage, string[] vibname)
+software.vib.install(string[] depot, boolean dryrun, boolean force, boolean maintenancemode, boolean noliveinstall, boolean nosigcheck, string proxy, string[] vibname, string[] viburl)
+software.vib.list(boolean rebootingimage)
+software.vib.remove(boolean dryrun, boolean force, boolean maintenancemode, boolean noliveinstall, string[] vibname)
+software.vib.update(string[] depot, boolean dryrun, boolean force, boolean maintenancemode, boolean noliveinstall, boolean nosigcheck, string proxy, string[] vibname, string[] viburl)
+storage.core
+storage.core.adapter
+storage.core.adapter.stats
+storage.core.adapter.stats.get(string adapter)
+storage.core.adapter.list()
+storage.core.adapter.rescan(string adapter, boolean all, boolean skipclaim, boolean skipfsscan, string type)
+storage.core.claiming
+storage.core.claiming.autoclaim(string claimruleclass, boolean enabled, boolean wait)
+storage.core.claiming.reclaim(string device)
+storage.core.claiming.unclaim(string adapter, long channel, string claimruleclass, string device, string driver, long lun, string model, string path, string plugin, long target, string type, string vendor)
+storage.core.claimrule
+storage.core.claimrule.add(string adapter, boolean autoassign, long channel, string claimruleclass, string device, string driver, boolean force, string ifunset, string iqn, long lun, string model, string plugin, long rule, long target, string transport, string type, string vendor, string wwnn, string wwpn)
+storage.core.claimrule.convert(boolean commit)
+storage.core.claimrule.list(string claimruleclass)
+storage.core.claimrule.load(string claimruleclass)
+storage.core.claimrule.move(string claimruleclass, long newrule, long rule)
+storage.core.claimrule.remove(string claimruleclass, string plugin, long rule)
+storage.core.claimrule.run(string adapter, long channel, string claimruleclass, string device, long lun, string path, long target, string type, boolean wait)
+storage.core.device
+storage.core.device.detached
+storage.core.device.detached.list(string device)
+storage.core.device.detached.remove(string device)
+storage.core.device.partition
+storage.core.device.partition.list(string device)
+storage.core.device.partition.showguid(string device)
+storage.core.device.smart
+storage.core.device.smart.get(string devicename)
+storage.core.device.stats
+storage.core.device.stats.get(string device)
+storage.core.device.vaai
+storage.core.device.vaai.status
+storage.core.device.vaai.status.get(string device)
+storage.core.device.vaai.help()
+storage.core.device.world
+storage.core.device.world.list(string device)
+storage.core.device.list(string device)
+storage.core.device.set(boolean defaultname, string device, string name, boolean nopersist, long queuefullsamplesize, long queuefullthreshold, long schednumreqoutstanding, string state)
+storage.core.device.setconfig(boolean detached, string device, boolean perenniallyreserved)
+storage.core.path
+storage.core.path.stats
+storage.core.path.stats.get(string path)
+storage.core.path.list(string device, string path)
+storage.core.path.set(string path, string state)
+storage.core.plugin
+storage.core.plugin.registration
+storage.core.plugin.registration.add(string dependencies, string fullpath, string modulename, string pluginclass, string pluginname)
+storage.core.plugin.registration.list(string modulename, string pluginclass)
+storage.core.plugin.registration.remove(string modulename)
+storage.core.plugin.list(string pluginclass)
+storage.core.help()
+storage.filesystem
+storage.filesystem.automount()
+storage.filesystem.list()
+storage.filesystem.mount(boolean nopersist, string volumelabel, string volumeuuid)
+storage.filesystem.rescan()
+storage.filesystem.unmount(boolean nopersist, string volumelabel, string volumepath, string volumeuuid)
+storage.nfs
+storage.nfs.param
+storage.nfs.param.get(string volumename)
+storage.nfs.param.set(long maxqueuedepth, string volumename)
+storage.nfs.add(string host, boolean readonly, string share, string volumename)
+storage.nfs.list()
+storage.nfs.remove(string volumename)
+storage.nmp
+storage.nmp.device
+storage.nmp.device.list(string device)
+storage.nmp.device.set(boolean default, string device, string psp)
+storage.nmp.path
+storage.nmp.path.list(string device, string path)
+storage.nmp.psp
+storage.nmp.psp.fixed
+storage.nmp.psp.fixed.deviceconfig
+storage.nmp.psp.fixed.deviceconfig.get(string device)
+storage.nmp.psp.fixed.deviceconfig.set(boolean cfgfile, boolean default, string device, string path)
+storage.nmp.psp.fixed.help()
+storage.nmp.psp.generic
+storage.nmp.psp.generic.deviceconfig
+storage.nmp.psp.generic.deviceconfig.get(string device)
+storage.nmp.psp.generic.deviceconfig.set(boolean cfgfile, string config, string device)
+storage.nmp.psp.generic.pathconfig
+storage.nmp.psp.generic.pathconfig.get(string path)
+storage.nmp.psp.generic.pathconfig.set(boolean cfgfile, string config, string path)
+storage.nmp.psp.generic.help()
+storage.nmp.psp.roundrobin
+storage.nmp.psp.roundrobin.deviceconfig
+storage.nmp.psp.roundrobin.deviceconfig.get(string device)
+storage.nmp.psp.roundrobin.deviceconfig.set(long bytes, boolean cfgfile, string device, long iops, string type, boolean useano)
+storage.nmp.psp.roundrobin.help()
+storage.nmp.psp.list()
+storage.nmp.satp
+storage.nmp.satp.generic
+storage.nmp.satp.generic.deviceconfig
+storage.nmp.satp.generic.deviceconfig.get(string device)
+storage.nmp.satp.generic.deviceconfig.set(string config, string device)
+storage.nmp.satp.generic.pathconfig
+storage.nmp.satp.generic.pathconfig.get(string path)
+storage.nmp.satp.generic.pathconfig.set(string config, string path)
+storage.nmp.satp.generic.help()
+storage.nmp.satp.rule
+storage.nmp.satp.rule.add(boolean boot, string claimoption, string description, string device, string driver, boolean force, string model, string option, string psp, string pspoption, string satp, string transport, string type, string vendor)
+storage.nmp.satp.rule.list(string satp)
+storage.nmp.satp.rule.remove(boolean boot, string claimoption, string description, string device, string driver, string model, string option, string psp, string pspoption, string satp, string transport, string type, string vendor)
+storage.nmp.satp.list()
+storage.nmp.satp.set(boolean boot, string defaultpsp, string satp)
+storage.nmp.help()
+storage.san
+storage.san.fc
+storage.san.fc.events
+storage.san.fc.events.clear(string adapter)
+storage.san.fc.events.get(string adapter)
+storage.san.fc.stats
+storage.san.fc.stats.get(string adapter)
+storage.san.fc.list(string adapter)
+storage.san.fc.reset(string adapter)
+storage.san.fcoe
+storage.san.fcoe.stats
+storage.san.fcoe.stats.get(string adapter)
+storage.san.fcoe.list(string adapter)
+storage.san.fcoe.reset(string adapter)
+storage.san.iscsi
+storage.san.iscsi.stats
+storage.san.iscsi.stats.get(string adapter)
+storage.san.iscsi.list(string adapter)
+storage.san.sas
+storage.san.sas.stats
+storage.san.sas.stats.get(string adapter)
+storage.san.sas.list(string adapter)
+storage.san.sas.reset(string adapter)
+storage.san.help()
+storage.vflash
+storage.vflash.cache
+storage.vflash.cache.stats
+storage.vflash.cache.stats.get(string cachename, string modulename)
+storage.vflash.cache.stats.reset(string cachename, string modulename)
+storage.vflash.cache.get(string cachename, string modulename)
+storage.vflash.cache.list(string modulename)
+storage.vflash.device
+storage.vflash.device.list(boolean eligible, boolean used)
+storage.vflash.module
+storage.vflash.module.stats
+storage.vflash.module.stats.get(string modulename)
+storage.vflash.module.get(string modulename)
+storage.vflash.module.list()
+storage.vflash.help()
+storage.vmfs
+storage.vmfs.extent
+storage.vmfs.extent.list()
+storage.vmfs.snapshot
+storage.vmfs.snapshot.extent
+storage.vmfs.snapshot.extent.list(string volumelabel, string volumeuuid)
+storage.vmfs.snapshot.list(string volumelabel, string volumeuuid)
+storage.vmfs.snapshot.mount(boolean nopersist, string volumelabel, string volumeuuid)
+storage.vmfs.snapshot.resignature(string volumelabel, string volumeuuid)
+storage.vmfs.unmap(long reclaimunit, string volumelabel, string volumeuuid)
+storage.vmfs.upgrade(string volumelabel, string volumeuuid)
+system.boot
+system.boot.device
+system.boot.device.get()
+system.boot.help()
+system.coredump
+system.coredump.file
+system.coredump.file.add(boolean auto, string datastore, string file, long size)
+system.coredump.file.get()
+system.coredump.file.list()
+system.coredump.file.remove(string file, boolean force)
+system.coredump.file.set(boolean enable, string path, boolean smart, boolean unconfigure)
+system.coredump.network
+system.coredump.network.check()
+system.coredump.network.get()
+system.coredump.network.set(boolean enable, string interfacename, string serveripv4, long serverport)
+system.coredump.partition
+system.coredump.partition.get()
+system.coredump.partition.list()
+system.coredump.partition.set(boolean enable, string partition, boolean smart, boolean unconfigure)
+system.coredump.help()
+system.hostname
+system.hostname.get()
+system.hostname.set(string domain, string fqdn, string host)
+system.maintenanceMode
+system.maintenanceMode.get()
+system.maintenanceMode.set(boolean enable, long timeout)
+system.module
+system.module.parameters
+system.module.parameters.list(string module)
+system.module.parameters.set(boolean force, string module, string parameterstring)
+system.module.get(string module)
+system.module.list(boolean enabled, boolean loaded)
+system.module.load(boolean force, string module)
+system.module.set(boolean enabled, boolean force, string module)
+system.process
+system.process.stats
+system.process.stats.load
+system.process.stats.load.get()
+system.process.stats.running
+system.process.stats.running.get()
+system.process.stats.help()
+system.process.list()
+system.secpolicy
+system.secpolicy.domain
+system.secpolicy.domain.list()
+system.secpolicy.domain.set(boolean alldomains, string level, string name)
+system.secpolicy.help()
+system.security
+system.security.certificatestore
+system.security.certificatestore.add(string filename)
+system.security.certificatestore.list()
+system.security.certificatestore.remove(string issuer, string serial)
+system.security.help()
+system.settings
+system.settings.advanced
+system.settings.advanced.list(boolean delta, string option, string tree)
+system.settings.advanced.set(boolean default, long intvalue, string option, string stringvalue)
+system.settings.kernel
+system.settings.kernel.list(boolean delta, string option)
+system.settings.kernel.set(string setting, string value)
+system.settings.keyboard
+system.settings.keyboard.layout
+system.settings.keyboard.layout.get()
+system.settings.keyboard.layout.list()
+system.settings.keyboard.layout.set(string layout, boolean nopersist)
+system.settings.keyboard.help()
+system.settings.help()
+system.shutdown
+system.shutdown.poweroff(long delay, string reason)
+system.shutdown.reboot(long delay, string reason)
+system.snmp
+system.snmp.get()
+system.snmp.hash(string authhash, string privhash, boolean rawsecret)
+system.snmp.set(string authentication, string communities, boolean enable, string engineid, string hwsrc, string loglevel, string notraps, long port, string privacy, string remoteusers, boolean reset, string syscontact, string syslocation, string targets, string users, string v3targets)
+system.snmp.test(string authhash, string privhash, boolean rawsecret, string user)
+system.stats
+system.stats.uptime
+system.stats.uptime.get()
+system.stats.help()
+system.syslog
+system.syslog.config
+system.syslog.config.logger
+system.syslog.config.logger.list()
+system.syslog.config.logger.set(string id, string reset, long rotate, long size)
+system.syslog.config.get()
+system.syslog.config.set(long defaultrotate, long defaultsize, long defaulttimeout, string logdir, boolean logdirunique, string loghost, string reset)
+system.syslog.mark(string message)
+system.syslog.reload()
+system.time
+system.time.get()
+system.time.set(long day, long hour, long min, long month, long sec, long year)
+system.uuid
+system.uuid.get()
+system.version
+system.version.get()
+system.visorfs
+system.visorfs.ramdisk
+system.visorfs.ramdisk.add(long maxsize, long minsize, string name, string permissions, string target)
+system.visorfs.ramdisk.list()
+system.visorfs.ramdisk.remove(string target)
+system.visorfs.tardisk
+system.visorfs.tardisk.list()
+system.visorfs.get()
+system.welcomemsg
+system.welcomemsg.get()
+system.welcomemsg.set(string message)
+vm.process
+vm.process.kill(string type, long worldid)
+vm.process.list()
+vsan.cluster
+vsan.cluster.get()
+vsan.cluster.join(string clusteruuid, boolean wait)
+vsan.cluster.leave()
+vsan.cluster.restore()
+vsan.datastore
+vsan.datastore.name
+vsan.datastore.name.get()
+vsan.datastore.name.set(string newname)
+vsan.datastore.help()
+vsan.maintenancemode
+vsan.maintenancemode.cancel()
+vsan.network
+vsan.network.ipv4
+vsan.network.ipv4.add(string agentmcaddr, long agentmcport, string interfacename, string mastermcaddr, long mastermcport, long multicastttl)
+vsan.network.ipv4.remove(boolean force, string interfacename)
+vsan.network.ipv4.set(string agentmcaddr, long agentmcport, string interfacename, string mastermcaddr, long mastermcport, long multicastttl)
+vsan.network.clear()
+vsan.network.list()
+vsan.network.remove(boolean force, string interfacename)
+vsan.network.restore()
+vsan.policy
+vsan.policy.cleardefault()
+vsan.policy.getdefault(string policyclass)
+vsan.policy.setdefault(string policy, string policyclass)
+vsan.storage
+vsan.storage.automode
+vsan.storage.automode.get()
+vsan.storage.automode.set(boolean enabled)
+vsan.storage.add(string[] disks, string ssd)
+vsan.storage.list(string device)
+vsan.storage.remove(string disk, string ssd, string uuid)
+vsan.trace
+vsan.trace.set(long numfiles, string path, boolean reset, long size)

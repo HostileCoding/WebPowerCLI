@@ -1,0 +1,4 @@
+Remember to Connect-VIServer
+I'm a work in progress
+Save your script often
+Don't take me too seriously
